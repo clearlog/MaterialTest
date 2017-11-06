@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_white"
+    android:orientation="vertical">
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/super_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:clickable="true"
+        android:focusable="true"
+        stv:sLeftTopTextString="歌手"
+        stv:sLeftBottomTextString="歌名"
+        stv:sLeftIconRes="@drawable/head_default"
+        stv:sLeftViewGravity="left_center"
+        stv:sRightTopTextString="大小"
+        stv:sRightBottomTextString="时长"/>
+</LinearLayout>

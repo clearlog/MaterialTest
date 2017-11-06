@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    //buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.direct.materialtest"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //compile 'com.zaaach:citypicker:1.2'
+    compile project(':citypicker')
+
+    //图片处理
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.github.bumptech.glide:glide:4.0.0'
+    compile 'com.youth.banner:banner:1.4.10'
+    compile 'com.jcodecraeer:xrecyclerview:1.3.2'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'org.litepal.android:core:+'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
+    compile 'com.github.lygttpod:SuperTextView:2.1.5'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.roughike:bottom-bar:2.3.1'
+    compile 'com.jaeger.statusbarutil:library:1.4.0'
+    //Flycotablayout
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //rxbinding
+    //butterknife
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    testCompile 'junit:junit:4.12'
+}

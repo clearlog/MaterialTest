@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="heqiangApp"></dbname>
+    <version value="1" />
+    <list>
+        <mapping class="com.direct.materialtest.weather.db.Province" />
+        <mapping class="com.direct.materialtest.weather.db.City" />
+        <mapping class="com.direct.materialtest.weather.db.County" />
+    </list>
+</litepal>

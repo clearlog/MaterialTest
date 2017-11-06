@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- 同级的item有几个则在toolbar右边显示几个 -->
+    <!--
+        id:之后设置点击事件的时候找到当前菜单项的唯一标识
+        title:必填项，Toolbar栏的menu标题
+        [如果存在icon，则显示icon图标，不显示文字]
+        [如果不存在icon,则显示文字]
+        app:showAsAction = "ifRoom" ：显示为一个行为
+        android:showAsAction="ifRoom":icon失效显示图标为“3个竖立的点”
+    -->
+    <item
+        android:id="@+id/backup"
+        android:title="网易music"
+        app:showAsAction="always" />
+    <!--<item-->
+        <!--android:id="@+id/delete"-->
+        <!--android:icon="@mipmap/ic_launcher"-->
+        <!--android:title="delete"-->
+        <!--app:showAsAction="ifRoom" />-->
+
+    <!-- item包含menu表示该menu是item下的子菜单 -->
+
+    <item
+        android:id="@+id/list"
+        android:icon="@mipmap/list"
+        android:title="list"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group>
+            <item
+                android:id="@+id/setting"
+                android:icon="@mipmap/setting"
+                android:title="setting"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/login"
+                android:icon="@mipmap/login"
+                android:title="login"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/regist"
+                android:icon="@mipmap/regist"
+                android:title="regist"
+                app:showAsAction="ifRoom" />
+            </group>
+        </menu>
+    </item>
+</menu>
