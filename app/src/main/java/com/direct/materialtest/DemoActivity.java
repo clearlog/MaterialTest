@@ -56,7 +56,7 @@ public class DemoActivity extends BaseActivity {
             public void onItemClick(View view, RecyclerView.ViewHolder holder,  int position) {
                 MusicMedia musicMedia=musicList.get(position-1);
                 playmusic(position);
-                //Toast.makeText(DemoActivity.this, musicMedia.getUrl(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(DemoActivity.this, musicMedia.getUrl(), Toast.LENGTH_SHORT).show();
 
             }
 
